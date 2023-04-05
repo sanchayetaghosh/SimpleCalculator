@@ -8,21 +8,35 @@ namespace SimpleCalculator
 {
     internal static class Calculator
     {
-        public static int Addition(int x, int y)
+        static int input1 = 0;
+        static int input2 = 0;
+
+        public static void Input(ref int input1, ref int input2)
         {
-            return x + y;
+            Console.WriteLine("Please provide two numbers to continue :");
+            input1 = Convert.ToInt32(Console.ReadLine());
+            input2 = Convert.ToInt32(Console.ReadLine());
         }
-        public static int Subtraction(int x, int y)
+        public static int Addition()
         {
-            return x - y;
+            Input(ref input1, ref input2);
+            return input1 + input2;
         }
-        public static int Division(int x, int y)
+        public static int Subtraction()
         {
-            return x / y;
+            Input(ref input1, ref input2);
+            return input1 - input2;
         }
-        public static int Multiplication(int x, int y)
+        public static int Division()
         {
-            return x * y;
+            Input(ref input1, ref input2);
+            return input1 / input2;
         }
+        public static int Multiplication()
+        {
+            Input(ref input1, ref input2);
+            return input1 * input2;
+        }
+        
     }
 }
