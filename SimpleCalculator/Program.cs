@@ -16,28 +16,32 @@ namespace SimpleCalculator
 
             string operatorAction = Console.ReadLine();
 
-            int result = 0;
 
             
             switch (operatorAction)
             {
                 case "Addition":
-                    result = Calculator.Addition();
+                    Print(Calculator.Addition());
                     break;
                 case "Subtraction":
-                    result = Calculator.Subtraction();
+                    Print(Calculator.Subtraction());
                     break;
                 case "Division":
-                    result = Calculator.Division();
+                    Print(Calculator.Division());
                     break;
                 case "Multiplication":
-                    result = Calculator.Multiplication();
+                    Print(Calculator.Multiplication());
                     break;
                 default:
                     Console.WriteLine("Kindly insert a valid input");
                     break;
             }
 
+            
+        }
+
+        public static void Print(int result)
+        {
             Console.WriteLine("The result is = " + result);
         }
     }
